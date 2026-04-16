@@ -83,6 +83,15 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <ThemeSwitcher />
               <Link
+                to="/file-itr"
+                className="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-body font-600 bg-gradient-to-r from-emerald-500 to-green-600 text-white border border-emerald-500/30 hover:from-emerald-600 hover:to-green-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/30"
+              >
+                <span>File ITR</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transform transition-transform duration-300 group-hover:scale-110">
+                  <path d="M2 7H12M12 7L9 4M12 7L9 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
+              <Link
                 to="/dashboard"
                 className="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-body font-600 bg-navy-800 text-white border border-white/10 hover:bg-navy-700 transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
@@ -137,8 +146,17 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
+            to="/file-itr"
+            className="mt-3 w-full py-3.5 rounded-xl text-sm font-body font-600 bg-gradient-to-r from-emerald-500 to-green-600 text-white border border-emerald-500/30 flex items-center justify-center gap-2"
+          >
+            File ITR {'->'}
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 7H12M12 7L9 4M12 7L9 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </Link>
+          <Link
             to="/dashboard"
-            className="mt-3 w-full py-3.5 rounded-xl text-sm font-body font-600 bg-navy-800 text-white border border-white/10"
+            className="mt-2 w-full py-3.5 rounded-xl text-sm font-body font-600 bg-navy-800 text-white border border-white/10"
           >
             Dashboard {'->'}
           </Link>
