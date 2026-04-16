@@ -1,0 +1,13 @@
+{
+  "buildCommand": "npm run build",
+  "builds": {
+    "src": {
+      "use": "@vercel/static",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  },
+  "installCommand": "npm install",
+  "framework": "vite"
+}
