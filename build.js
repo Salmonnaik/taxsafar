@@ -1,15 +1,10 @@
-#!/usr/bin/env node
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
-const { spawn } = require('child_process');
-const path = require('path');
+// Import and run vite build
+const vite = require('vite');
 
-const vitePath = path.join(__dirname, 'node_modules', '.bin', 'vite');
-
-const buildProcess = spawn('node', [vitePath, 'build'], {
-  stdio: 'inherit',
-  cwd: __dirname
-});
-
-buildProcess.on('close', (code) => {
-  process.exit(code);
+vite.build().catch((err) => {
+  console.error(err);
+  process.exit(1);
 });
